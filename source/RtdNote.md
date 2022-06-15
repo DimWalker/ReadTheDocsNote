@@ -9,9 +9,10 @@
 
 
 
-Github新建项目
+## Github新建项目
 
-在github（gitee）上新建项目，如ReadTheDocsNote
+- 在github（gitee）上新建项目，如ReadTheDocsNote
+
 
 
 
@@ -19,17 +20,20 @@ Github新建项目
 
 
 
-打开Anaconda Prompt 
+- 打开Anaconda Prompt 
+
 
 ![image-20220615141517804](assets/images/image-20220615141517804.png)
 
-安装Sphinx
+- 安装Sphinx
+
 
 ```bash
 pip install sphinx
 ```
 
-构建项目文档
+- 构建项目文档
+
 
 ```bash
 # 将刚才在github（gitee）新建的项目，克隆到本地
@@ -40,11 +44,13 @@ cd ReadTheDocsNote
 sphinx-quickstart
 ```
 
-按提示设置项目文档信息
+- 按提示设置项目文档信息
+
 
 ![image-20220615142450640](assets/images/image-20220615142450640.png)
 
-编译
+- 编译
+
 
 ```
 make html
@@ -52,11 +58,13 @@ make html
 
 ![image-20220615142631968](assets/images/image-20220615142631968.png)
 
-查看页面效果
+- 查看页面效果
 
-方式1，直接双击 build/html/index.html
+  - 方式1，直接双击 build/html/index.html
 
-方式2，部署http服务器
+
+  - 方式2，部署http服务器
+
 
 ```bash
 # 安装sphinx-autobuild
@@ -65,9 +73,10 @@ pip install sphinx-autobuild
 sphinx-autobuild source build/html
 ```
 
-更换主体
+- 更换主体
 
-默认主体是alabaster，ReadTheDocs上常见的主体是sphinx_rtd_theme
+  - 默认主体是alabaster，ReadTheDocs上常见的主体是sphinx_rtd_theme
+
 
 ```
 # 安装主题 
@@ -76,7 +85,8 @@ pip install sphinx_rtd_theme
 
 > 其他注意可以访问 https://sphinx-themes.org/
 
-修改conf.py
+- 修改conf.py
+
 
 ```
 html_theme = 'sphinx_rtd_theme'
@@ -84,9 +94,10 @@ html_theme = 'sphinx_rtd_theme'
 
 ![image-20220615144457803](assets/images/image-20220615144457803.png)
 
-配置Markdown
+- 配置Markdown
 
-Sphinx默认只支持reST格式，Markdown需要安装插件
+  - Sphinx默认只支持reST格式，Markdown需要安装插件
+
 
 ```
 # markdown
@@ -95,7 +106,8 @@ pip install recommonmark
 pip install sphinx_markdown_tables
 ```
 
-修改conf.py
+- 修改conf.py
+
 
 ```
 extensions = ['recommonmark','sphinx_markdown_tables']
@@ -103,29 +115,37 @@ extensions = ['recommonmark','sphinx_markdown_tables']
 
 ![image-20220615144521817](assets/images/image-20220615144521817.png)
 
-使用Typora编写文档
+- 再次编译查看效果
 
-修改 偏好设置 -> 图像
+## 使用Typora编写md文档
+
+- 修改 偏好设置 -> 图像
 
 ![image-20220615145640683](assets/images/image-20220615145640683.png)
 
-打开 视图 -> 文件树
-
-如果路径不在项目上，点击最下面，打开文件夹
+- 打开 视图 -> 文件树
+  - 如果路径不在项目上，点击最下面，打开文件夹
 
 ![image-20220615150136450](assets/images/image-20220615150136450.png)
 
-新建md文档
+- 新建md文档
+  - 在目录右键，新建docs/Sample.md
 
-在目录右键，新建docs/Sample.md
+```
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+```
+
+
 
 ![image-20220615150348827](assets/images/image-20220615150348827.png)
 
-打开Sample.md，编辑内容
+## 编写编译所需的文件
 
-使用其他文本编辑器
-
-打开source/index.rst，并编辑
+- 新建source/index.rst，使用其他编辑器编辑该文件
 
 ```
 Sample Markdown
@@ -139,7 +159,7 @@ Sample Markdown
 
 ![image-20220615154054757](assets/images/image-20220615154054757.png)
 
-新建source/docs/index.rst，编辑
+- 新建source/docs/index.rst，编辑
 
 ```
 Sample Markdown
@@ -151,13 +171,13 @@ Sample Markdown
     Sample
 ```
 
-项目根目录新建.gitignore文件，排除build文件夹
+- 在项目根目录新建.gitignore文件
 
 ```
 build/
 ```
 
-新建requirements.txt
+- 新建requirements.txt
 
 ```
 alabaster==0.7.12
@@ -218,10 +238,72 @@ zipp==3.4.1
 
 ```
 
-  上传项目到Github（gitee）
+-   上传项目到Github（gitee）
 
 ```
 git add .
 git commint -m "update"
 git push
 ```
+
+## ReadTheDocs新建项目
+
+- 创建ReadTheDocs项目
+- 进入地址 https://readthedocs.org/dashboard/
+- 导入项目
+
+![image-20220615155652615](assets/images/image-20220615155652615.png)
+
+- 手动导入
+
+![image-20220615155716885](assets/images/image-20220615155716885.png)
+
+- 填写名称，代码库地址，勾选高级选项
+
+![image-20220615160703552](assets/images/image-20220615160703552.png)
+
+- 选择语言
+
+> 这个设置会影响readthedocs的默认url。
+>
+> 并且新建之后再改，居然是不生效的？
+
+![image-20220615160812671](assets/images/image-20220615160812671.png)
+
+- 等待构建完成
+
+![image-20220615162335748](assets/images/image-20220615162335748.png)
+
+- 完成后点击阅读文档，查下效果
+
+![image-20220615162416187](assets/images/image-20220615162416187.png)
+
+## 自动构建
+
+- 官方说明文档见 https://docs.readthedocs.io/en/stable/integrations.html#github
+- 在ReadTheDocs上，设置集成
+
+![image-20220615162726518](assets/images/image-20220615162726518.png)
+
+- 复制这个url
+
+![image-20220615162904952](assets/images/image-20220615162904952.png)
+
+- 在Github上，设置Webhooks
+
+![image-20220615162833971](assets/images/image-20220615162833971.png)
+
+- 将刚才复制的Url，粘贴到Payload URL
+
+![image-20220615162945940](assets/images/image-20220615162945940.png)
+
+- 设置事件
+  - 勾选**Branch or tag creation**, **Branch or tag deletion**, **Pull requests**, **Pushes**.
+
+![image-20220615163257300](assets/images/image-20220615163257300.png)
+
+![image-20220615163239997](assets/images/image-20220615163239997.png)
+
+
+
+- 修改Sample.md，提交github，等待自动构建完成，查看效果。
