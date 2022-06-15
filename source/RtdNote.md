@@ -306,4 +306,8 @@ git push
 
 
 
-- 修改Sample.md，提交github，等待自动构建完成，查看效果。 
+- 修改Sample.md，提交github
+- 等待自动构建完成，查看效果。 
+
+![image-20220615165552234](assets/images/image-20220615165552234.png)
+
