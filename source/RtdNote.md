@@ -218,4 +218,10 @@ zipp==3.4.1
 
 ```
 
-  
+  上传项目到Github（gitee）
+
+```
+git add .
+git commint -m "update"
+git push
+```
