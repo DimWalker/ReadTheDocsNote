@@ -3,6 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. meta::
+   :baidu-site-verification: code-mZQgwkJnVM
+
 ReadTheDocsNote
 ===========================================
 
@@ -18,6 +21,14 @@ Sample Markdown
    :maxdepth: 2
 
    docs/index
+
+开源示例 
+=================================
+• `Github`_
+• `Gitee`_
+
+.. _Github: https://github.com/DimWalker/ReadTheDocsNote
+.. _Gitee: https://gitee.com/DimWalker/ReadTheDocsNote
 
 Indices and tables
 ==================
