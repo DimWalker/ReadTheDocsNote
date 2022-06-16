@@ -73,9 +73,9 @@ pip install sphinx-autobuild
 sphinx-autobuild source build/html
 ```
 
-- 更换主体
+- 更换主题
 
-  - 默认主体是alabaster，ReadTheDocs上常见的主体是sphinx_rtd_theme
+  - 默认主题是alabaster，ReadTheDocs上常见的主题是sphinx_rtd_theme
 
 
 ```
