@@ -1,22 +1,22 @@
 # 使用ReadTheDocs构建托管技术文档
 
-## 前置准备
+# 前置准备
 
 1. ReadTheDocs 账号
 2. Github（Gitee）账号
 3. Python环境（如anaconda3）
-4. Typora（最后一个免费版本 0.11.18）
+4. ~~Typora（最后一个免费版本 0.11.18）~~（免费版也强制升级了）
+5. VScode
 
 
-
-## Github新建项目
+# Github新建项目
 
 - 在github（gitee）上新建项目，如ReadTheDocsNote
 
 
 
 
-## Sphinx安装与测试
+# Sphinx安装与测试
 
 
 
@@ -117,8 +117,9 @@ extensions = ['recommonmark','sphinx_markdown_tables']
 
 - 再次编译查看效果
 
-## 使用Typora编写md文档
-
+# ~~使用Typora编写md文档~~
+<details>
+<summary>点击查看详细内容</summary>
 - 修改 偏好设置 -> 图像
 
 ![image-20220615145640683](assets/images/image-20220615145640683.png)
@@ -142,8 +143,31 @@ extensions = ['recommonmark','sphinx_markdown_tables']
 
 
 ![image-20220615150348827](assets/images/image-20220615150348827.png)
+</details>
 
-## 编写编译所需的文件
+# 使用VScode编写MarkDown
+
+- 安装插件
+  1. Markdown All in One
+  2. Markdown Preview Enhanced
+  3. Markdown Image
+![图 1](../images/85deb44b26737bb28b640f3c2290b2fc2a3fcc7016430c94fc1f329cc927eebc.png)  
+
+- 修改插件配置
+点击对应插件的小齿轮，再点击扩展设置，可以修改控件的设置
+默认设置即可
+![图 2](../images/7b7ee0f9dbcd207c4aebd83aa2215f890d766a5ed94ec6bd438ecb4e2025f909.png)  
+
+- 修改插件快捷键
+  依次点击 文件 -》 首选项 -》 键盘快捷方式
+![图 3](../images/b8b5687e1d19ffcf62703b72b9bedb39e4c0614c004425ca4d1f9287e4dbd306.png)  
+
+  搜索Markdown All in One，修改Toggle code block的快捷键及条件
+![图 4](../images/31a2e2437ca399ea0818eb531add8988febf268bb6c824f43f6509d021fb0e0e.png)  
+
+  粘贴图片的快捷键默认是shift + alt + v，按需修改
+
+# 编写编译所需的文件
 
 - 新建source/index.rst，使用其他编辑器编辑该文件
 
@@ -246,7 +270,7 @@ git commint -m "update"
 git push
 ```
 
-## ReadTheDocs新建项目
+# ReadTheDocs新建项目
 
 - 创建ReadTheDocs项目
 - 进入地址 https://readthedocs.org/dashboard/
@@ -278,7 +302,7 @@ git push
 
 ![image-20220615162416187](assets/images/image-20220615162416187.png)
 
-## 自动构建
+# 自动构建
 
 - 官方说明文档见 https://docs.readthedocs.io/en/stable/integrations.html#github
 - 在ReadTheDocs上，设置集成
