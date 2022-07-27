@@ -151,6 +151,7 @@ extensions = ['recommonmark','sphinx_markdown_tables']
   1. Markdown All in One
   2. Markdown Preview Enhanced
   3. Markdown Image
+
 ![图 1](../images/85deb44b26737bb28b640f3c2290b2fc2a3fcc7016430c94fc1f329cc927eebc.png)  
 
 - 修改插件配置
