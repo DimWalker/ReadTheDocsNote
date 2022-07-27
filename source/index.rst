@@ -10,7 +10,7 @@ ReadTheDocsNote
 ===========================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
    RtdNote
 
@@ -18,7 +18,7 @@ Sample Markdown
 =================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 6
 
    docs/index
 

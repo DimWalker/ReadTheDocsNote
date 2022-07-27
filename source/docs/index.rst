@@ -2,6 +2,6 @@ Sample
 =================================
  
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 5
 
     Sample
